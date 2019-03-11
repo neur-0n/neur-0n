@@ -22,11 +22,11 @@ const movies = [
 mongoose.connect(process.env.DBURL,  {useNewUrlParser: true})
 .then(() => {
   console.log(`Connect to mongo ${process.env.DBURL}`)
-  return User.deleteMany();
+  return Movie.deleteMany();
 })
-.then(() => User.insertMany(users))
-.then((users) => {
-  console.log(`User save ${users}`)
+.then(() => Movie.insertMany(movies))
+.then((movies) => {
+  console.log(`Movie save ${movies}`)
   return mongoose.connection.close()
 })
 .then(() => console.log("Disconnect"))
