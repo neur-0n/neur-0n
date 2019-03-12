@@ -50,7 +50,9 @@ Router.get("/amarillo", (req,res)=>{
     ]})
   })
 
-
+Router.get("/formverde", (req,res) => {
+  
+})
 
 // Router.post("/verde", (req,res) =>{
 //   .then(res.render(`/user(formverde`))
