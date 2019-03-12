@@ -1,8 +1,15 @@
+<script src="/javascripts/movie.js"></script>
+
 {{#each peli}}
 <p>{{title}}</p>
 <p>{{overview}}</p>
-<p>{{img}}</p>
+<img src="https://image.tmdb.org/t/p/w1280/{{img}}" alt="">
 <p>{{dates}}</p>
 <p>{{popularity}}</p>
 
+<a href="/user/milista">mi lista</a>
+<button onclick="pepe({title:`{{title}}`, overview:`{{overview}}`, img:`{{img}}`, dates:`{{dates}}`, popularity:`{{popularity}}`})"></button>
+
 {{/each}}
+
+

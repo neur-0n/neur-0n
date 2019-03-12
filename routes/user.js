@@ -50,10 +50,9 @@ Router.get("/amarillo", (req,res)=>{
     ]})
   })
 
+  Router.get("/milista",(req,res)=>{
+    res.render("user/profile")
+  })
 
-
-// Router.post("/verde", (req,res) =>{
-//   .then(res.render(`/user(formverde`))
-// })
 
 module.exports = Router;
