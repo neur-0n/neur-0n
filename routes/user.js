@@ -54,5 +54,8 @@ Router.get("/amarillo", (req,res)=>{
     res.render("user/profile")
   })
 
+Router.get("/formverde", (req,res) => {
+  
+})
 
 module.exports = Router;
