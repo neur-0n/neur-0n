@@ -1,0 +1,13 @@
+<form action="/movie/{{ruta}}" method="post">
+
+  <select name="genero" id="">
+    <p>{{gener}}</p>
+    {{#each gener}}
+      <option value="{{this.value}}">{{name}}</option>
+    {{/each}}
+  </select>
+
+
+  <button type="submit">enviar!</button>
+</form>
+  
