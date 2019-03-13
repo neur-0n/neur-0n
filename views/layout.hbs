@@ -17,6 +17,12 @@
     <a href="/auth/signup">Signup</a><br>
     <a href="/auth/logout">Logout</a><br>
   </nav>
+  
+{{!-- con esto se muestra el avatoa de usuario SMP --}}
+{{#if isUserLoggedIn  }}
+  <p> Hello, {{ currentUserInfo.username }} </p>
+  <img src={{currentUserInfo.img}} alt="" style="width: 4rem; height: 4rem; border-radius: 50%; object-fit: cover;">
+{{/if}}
 
   {{{body}}}
 
