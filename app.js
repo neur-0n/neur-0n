@@ -70,9 +70,25 @@ app.use(session({
   saveUninitialized: true,
   store: new MongoStore( { mongooseConnection: mongoose.connection })
 }))
+
+
+
+
+
 app.use(flash());
 require('./passport')(app);
-    
+ //middleware. cada vez q vamos a una ruta pasamos por este middleware. 
+ //inicio sesion, por lo q guardo el local el objeto de inicio de sesion
+app.use((req, res, next) => {
+  if (req.user) {
+    res.locals.currentUserInfo = req.user;
+    res.locals.isUserLoggedIn = true;
+  } else {
+    res.locals.isUserLoggedIn = false;
+  }
+
+  next();
+});
 
 const index = require('./routes/index');
 app.use('/', index);

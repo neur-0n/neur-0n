@@ -38,11 +38,26 @@ Router.get("/rojo", (req, res) => {
   })
 })
 
+Router.get("/amarillo", (req, res) => {
+  res.render("user/form", {
+    ruta: "formverde",
+    gener: [
+      { value: "99", name: "Documentary" },
+      { value: "36", name: "History" },
+      { value: "10402", name: "Music" },
+      { value: "10770", name: "TV Movie" },
+      { value: "37", name: "Western" }
+
+    ]
+  })
+})
+
 
 
 
 Router.get("/milista",(req,res) =>{
   User.findById(req.user.id)
+  .populate("list")
   .then(user => res.render("user/profile",{user}))
   // .catch(err)
 })

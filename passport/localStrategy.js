@@ -20,6 +20,7 @@ passport.use(new LocalStrategy({
         return;
       }
 
+      //req.session.currentUser = foundUser;
       done(null, foundUser);
     })
     .catch(err => done(err));
