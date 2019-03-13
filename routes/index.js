@@ -17,7 +17,7 @@ router.post("/userProfile", (req,res) =>{
     res.json({msg:"yata pesao"})
     return
   }
-    const newMovie = new movie({
+    const newMovie = new Movie({
       title,
       img, 
       genero, 
@@ -26,7 +26,10 @@ router.post("/userProfile", (req,res) =>{
       popularity
     })
     newMovie.save()
-    .then(()=>  res.json({msg:"SAVE"}) )
+    .then(movie => {
+      User.findByIdAndUpdate(req.user.id, { $addToSet: { list: movie.id } })
+    })
+
   })
   .catch(err => {
     res.json( { message: "Something went wrong" });

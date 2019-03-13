@@ -1,6 +1,6 @@
 const Router = require("express").Router();
 const User = require("../models/User");
-
+const uploadCloud = require('../config/cloudinary.js')
 
 Router.get("/animo", (req,res) =>{
   res.render("user/animo")
@@ -50,12 +50,26 @@ Router.get("/amarillo", (req,res)=>{
     ]})
   })
 
-  Router.get("/milista",(req,res)=>{
-    res.render("user/profile")
-  })
 
-Router.get("/formverde", (req,res) => {
-  
+
+Router.get("/milista",(req,res) =>{
+  User.findById(req.user.id)
+  .then(user => res.render("user/profile",{user}))
+  // .catch(err)
+})
+
+Router.get("/milista/update",(req,res) =>{
+  User.findById(req.user.id)
+  .then(user => res.render("user/edituser",{user}))
+  // .catch(err)
+})
+
+Router.post("/milista/update" , uploadCloud.single('photo'), (req, res) =>{
+  const {username} = req.body
+  const img = req.file.secure_url
+    User.findByIdAndUpdate( req.user._id, {username, img})
+      .then(user => res.redirect(`/user/milista`))
+      .catch(err => console.log(err))
 })
 
 module.exports = Router;
