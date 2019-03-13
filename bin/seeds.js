@@ -22,12 +22,12 @@ let users = [
   {
     username: "alice",
     password: bcrypt.hashSync("alice", bcrypt.genSaltSync(bcryptSalt)),
-    //list: [{title:doraemon,},{}]
+   
   },
   {
     username: "bob",
     password: bcrypt.hashSync("bob", bcrypt.genSaltSync(bcryptSalt)),
-    //list: [{},{}]
+  
   }
 ]
 

@@ -1,1 +1,16 @@
 <h1>MI LISTA</h1>
+{{#each user.list}}
+<p>{{title}}</p>
+<img src="https://image.tmdb.org/t/p/w1280/{{img}}" alt="">
+
+<form action="/user/milista/{{_id}}">
+  <button type="submit">Borrar</button>
+</form>
+
+{{!-- <a href="/user/milista/{{_id}}">borrar</a> --}}
+
+
+{{/each}}
+
+
+
