@@ -4,7 +4,8 @@ const Schema   = mongoose.Schema;
 const userSchema = new Schema({
   username: String,
   password: String,
-  list: [ {type: Schema.Types.ObjectId, ref:"Movie"} ]
+  list: [ {type: Schema.Types.ObjectId, ref:"Movie"} ],
+  img: String
 }, {
   timestamps: {
     createdAt: 'created_at',

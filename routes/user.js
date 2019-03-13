@@ -1,6 +1,6 @@
 const Router = require("express").Router();
 const User = require("../models/User");
-
+const uploadCloud = require('../config/cloudinary.js')
 
 Router.get("/animo", (req, res) => {
   res.render("user/animo")
@@ -39,28 +39,26 @@ Router.get("/rojo", (req, res) => {
 })
 
 
-Router.get("/amarillo", (req, res) => {
-  res.render("user/form", {
-    ruta: "formverde",
-    gener: [
-      { value: "99", name: "Documentary" },
-      { value: "36", name: "History" },
-      { value: "10402", name: "Music" },
-      { value: "10770", name: "TV Movie" },
-      { value: "37", name: "Western" }
 
-    ]
-  })
+
+Router.get("/milista",(req,res) =>{
+  User.findById(req.user.id)
+  .then(user => res.render("user/profile",{user}))
+  // .catch(err)
 })
 
-Router.get("/milista", (req, res) => {
+Router.get("/milista/update",(req,res) =>{
   User.findById(req.user.id)
-  .populate("list")
-  
+  .then(user => res.render("user/edituser",{user}))
+  // .catch(err)
+})
 
-  .then(user => {
-      console.log(user)
-      res.render("user/profile", { user })})
+Router.post("/milista/update" , uploadCloud.single('photo'), (req, res) =>{
+  const {username} = req.body
+  const img = req.file.secure_url
+    User.findByIdAndUpdate( req.user._id, {username, img})
+      .then(user => res.redirect(`/user/milista`))
+      .catch(err => console.log(err))
 })
 
 //User.find({$pull: {list: [req.params.delete_id]}})
