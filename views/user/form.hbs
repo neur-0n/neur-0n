@@ -1,13 +1,18 @@
-<form  class=""action="/movie/{{ruta}}" method="post" style="padding-top:100px">
+<section class="genero">
+  <form class="form-genero" action="/movie/{{ruta}}" method="post" style="padding-top:100px">
 
-  <select name="genero" id="">
-    {{!-- <p>{{pepe}}</p> --}}
-    {{#each gener}}
-      <option value="{{this.value}}">{{name}}</option>
-    {{/each}}
-  </select>
+    <select name="genero" id="">
+      {{!-- <p>{{pepe}}</p> --}}
+      {{#each gener}}
+        <option value="{{this.value}}">{{name}}</option>
+      {{/each}}
+    </select>
 
 
-  <button class="for-but"type="submit">enviar!</button>
-</form>
-  
+    <button class="enviar"type="submit">enviar!</button>
+  </form>
+</section>
+
+
+
+

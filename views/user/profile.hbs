@@ -1,4 +1,19 @@
-<h1>MI LISTA</h1>
+<h1>MI PERFIL</h1>
+
+
+<div class="miperfil-container">
+ <img src="{{user.img}}" alt="" srcset="">
+<p>Nombre:{{user.username}}</p>
+ <a href="/user/milista/update">Edit</a>
+ {{!-- <a href="/user/milista">Actualizar</a>  --}}
+ </div>
+
+
+
+<h4>MI LISTA</h4>
+{{user.lista}}
+
+
 
 
 {{#each user.list}}
@@ -21,11 +36,4 @@
 
 
 
-<h1>MI PERFIL</h1>
 
- <img src="{{user.img}}" alt="" srcset="">
-<p>Nombre:{{user.username}}</p>
- <a href="/user/milista/update">Edit</a>
- <a href="/user/milista">Actualizar</a> 
-<h4>MI LISTA</h4>
-{{user.lista}}
