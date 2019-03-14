@@ -6,16 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{title}}</title>
   <link rel="stylesheet" href="/stylesheets/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
   {{!-- js no tiene axios, y por ello lo requerimos  --}}
 </head>
 <body>
 
-  <nav>
+  <nav class="navbar">
     <a href="/">Home</a><br>
+    {{#if isUserLoggedIn  }}
+    <a href="/auth/logout">Logout</a><br>
+    {{else}}
     <a href="/auth/login">Login</a><br>
     <a href="/auth/signup">Signup</a><br>
-    <a href="/auth/logout">Logout</a><br>
+    {{/if}}
   </nav>
   
 {{!-- con esto se muestra el avatoa de usuario SMP --}}
