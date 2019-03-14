@@ -1,28 +1,21 @@
-
-
 <section class="movies-container">
 
 <script src="/javascripts/movie.js"></script>
-
 {{#each peli}}
+
   <article class="movie">
 
       
-      <p>{{title}}</p>
+      <p class="p-peli">{{title}}<br>{{dates}}</p>
+      
       <img src="https://image.tmdb.org/t/p/w1280/{{img}}" class="movie-img">
-      <p>{{dates}}</p>
-      <p class="overview">{{overview}}</p>
-      
-      
-      <p>{{popularity}}</p>
-
+      <p class="overviews">{{overview}}</p>
       <a href="/user/milista/{{_id}}">mi lista</a>
-      {{!-- <a href="/movie/formverde{{_id}}">añadir ami lista</a> --}}
-      <button onclick="pepe({title:`{{title}}`, overview:`{{overview}}`, img:`{{img}}`, dates:`{{dates}}`, popularity:`{{popularity}}`})">añade</button>
-
-    
+      
+      <button class="for-but" onclick="pepe({title:`{{title}}`, overview:`{{overview}}`, img:`{{img}}`, dates:`{{dates}}`})">añade</button>
 
   </article>
-   {{/each}}
+    {{/each}}
 
 </section>
+{{!-- <a href="/movie/formverde{{_id}}">añadir ami lista</a> --}}

@@ -4,10 +4,8 @@
 body {
   font-family: 'Fira Sans', sans-serif; }
 
-body {
-  overflow: hidden; }
-  body.homeClasses {
-    animation: color 1.5s ease infinite; }
+body.homeClasses {
+  animation: color 1.5s ease infinite; }
 
 .ball {
   position: absolute;
@@ -46,8 +44,7 @@ body {
 .container {
   width: 345px;
   height: 25px;
-  position: absolute;
-  margin-left: -170px; }
+  position: absolute; }
 
 .pre {
   padding: 5px;
@@ -186,16 +183,36 @@ nav a {
   color: black; }
 
 .movies-container {
-  width: 1400px;
+  max-width: 1000px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; }
+  justify-content: space-between;
+  padding-top: 8rem;
+  margin: 0 auto; }
+
+.p-peli {
+  text-align: center;
+  font-size: 20px;
+  padding-bottom: 10px; }
+
+.movie {
+  width: 20%;
+  flex: 0 0 33%;
+  box-sizing: border-box;
+  padding: 40px; }
 
 .movie-img {
-  max-width: 20%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; }
+  max-height: 30rem;
+  width: 100%;
+  object-fit: cover; }
+
+.overviews {
+  max-width: 300px;
+  line-height: 15px;
+  text-align: center;
+  font-size: 12px;
+  display: block;
+  margin: 20px auto; }
 
 nav a {
   margin-right: 15px;
@@ -290,8 +307,7 @@ label {
   display: flex;
   width: 100%;
   box-sizing: border-box;
-  height: fit-content;
-  height: 90vh; }
+  height: fit-content; }
 
 .box {
   flex: 1;
