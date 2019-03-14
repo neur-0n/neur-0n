@@ -7,18 +7,14 @@
   <title>{{title}}</title>
   <link rel="stylesheet" href="/stylesheets/style.css" />
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
-<<<<<<< HEAD
-=======
 
->>>>>>> 5ac97bfdbcc63188f0fa244c07fbefe77026b520
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
   {{!-- js no tiene axios, y por ello lo requerimos  --}}
 </head>
-<body>
+<body class={{homeClasses}}>
 
-  <nav class="navbar">
+  <nav class="navbar {{homeClasses}}">
     <a href="/">Home</a><br>
-<<<<<<< HEAD
     
     {{#if isUserLoggedIn}}
     <a href="/auth/logout">Logout</a><br>
@@ -30,13 +26,6 @@
     {{else}}
     <a href="/auth/signup">Signup</a><br>
     <a href="/auth/login">Login</a><br>
-=======
-    {{#if isUserLoggedIn  }}
-    <a href="/auth/logout">Logout</a><br>
-    {{else}}
-    <a href="/auth/login">Login</a><br>
-    <a href="/auth/signup">Signup</a><br>
->>>>>>> 5ac97bfdbcc63188f0fa244c07fbefe77026b520
     {{/if}}
   </nav>
   

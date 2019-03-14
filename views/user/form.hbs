@@ -1,7 +1,7 @@
-<form  class=".form-login"action="/movie/{{ruta}}" method="post">
+<form  class="form-login"action="/movie/{{ruta}}" method="post">
 
-  <select class="select" name="genero" id="">
-    <p>{{gener}}</p>
+  <select name="genero" id="">
+    {{!-- <p>{{pepe}}</p> --}}
     {{#each gener}}
       <option value="{{this.value}}">{{name}}</option>
     {{/each}}
