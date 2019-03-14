@@ -9,7 +9,8 @@ Router.get("/animo", (req, res) => {
     "Wunderbar!",
     "Estan blandito que me quiero morir",
     "Super!",
-    "Party Time!"
+    "Party Time!",
+    "Sofía come carne a escondidas"
   ]
   const greenSentence = greenSentences[Math.floor(Math.random()*greenSentences.length)]
 
@@ -32,7 +33,8 @@ Router.get("/animo", (req, res) => {
     "Día de proyecto",
     "Último día de los de primero",
     "El día que se fue Juan",
-    "Estoy en un pozo y no veo la luz"
+    "Estoy en un pozo y no veo la luz",
+    
   ]
   
   const redSentence = redSentences[Math.floor(Math.random()*redSentences.length)]

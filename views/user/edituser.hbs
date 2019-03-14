@@ -1,6 +1,7 @@
-<form class="form-login"action="/auth/login" methoaction="/user/milista/update" method="POST"enctype="multipart/form-data">
-<h2>Editar perfil</h2>
-    <label>Poster</label>
+<section class="editar-perfil">
+<form class="form-login" action="/user/milista/update" method="POST"enctype="multipart/form-data">
+<h1>Editar perfil</h1>
+    <label>Cambia la foto</label>
     <input type="file" name="photo">
 
 
@@ -8,4 +9,6 @@
 <input type="text" name="username" value="{{user.username}}">
 <button class="for-but" type="submit">SAVE ME</button>
 </form>
+
+</section>
 
