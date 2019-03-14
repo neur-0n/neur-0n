@@ -1,6 +1,6 @@
-<form action="/movie/{{ruta}}" method="post">
+<form  class=".form-login"action="/movie/{{ruta}}" method="post">
 
-  <select name="genero" id="">
+  <select class="select" name="genero" id="">
     <p>{{gener}}</p>
     {{#each gener}}
       <option value="{{this.value}}">{{name}}</option>
@@ -8,6 +8,6 @@
   </select>
 
 
-  <button type="submit">enviar!</button>
+  <button class="for-but"type="submit">enviar!</button>
 </form>
   
