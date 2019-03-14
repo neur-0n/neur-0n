@@ -62,7 +62,16 @@ Router.get("/animo", (req, res) => {
 })
 
 Router.get("/verde", (req, res) => {
-  
+  console.log({gener: [
+    { value: "28", name: "Action" },
+    { value: "12", name: "Aventure" },
+    { value: "26", name: "Animation" },
+    { value: "35", name: "Comedy" },
+    { value: "10751", name: "Family" },
+    { value: "14", name: "Fantasy" },
+    { value: "10749", name: "Romance" },
+    { value: "878", name: "Science Fiction" }
+  ]})
   res.render("user/form", {
     ruta: "formverde",
     msg: "",
