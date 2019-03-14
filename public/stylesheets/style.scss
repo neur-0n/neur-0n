@@ -10,18 +10,19 @@ body {
 .home {
   background-image: url("/images/home1.jpg");
   background-size: cover;
+  background-position-x: 50%;
+  background-position-y: 50%;
   background-repeat: no-repeat;
   height: 100vh;
   
 }
 
 nav {
-  //position: fixed;
   width: 100vw;
   display: flex;
-  background-color:rgba(255, 255, 255, 0.5 );
+  background-color:rgba(182, 179, 179, 0.5);
   justify-content: flex-end;
-  padding: 20px;
+  padding: 5px;
   box-sizing: border-box;
   font-size: 20px;
 }
@@ -31,10 +32,7 @@ nav a {
   text-decoration: none;
   color: black;
 }
-//------------------------------LOGIN------------------------------
-.login-container {
-  margin-top: 50px;
-}
+
 //------------------------------PELIS------------------------------
 .movies-container {
   width: 1400px;
@@ -45,9 +43,9 @@ nav a {
 }
 .movie-img{
   max-width: 20%;
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: space-between;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
 }
  
  nav a {
@@ -57,18 +55,38 @@ nav a {
   
  }
 //-----------FORM,login,signup,select-------------
+.signup{
+  background-image: url("/images/home4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display:flex;
+  flex-direction: row-reverse;
+}
 
+
+
+.login{
+  background-image: url("/images/home3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display:flex;
+  flex-direction: row-reverse;
+}
 h2 {
   display: flex;
   justify-content: center;
 }
 .form-login{
-  background: gray;
+  background: #fff;
   width: 250px;
-  margin: 100px;
   padding: 50px 50px 50px 50px;
-  opacity: 0.85;
+  opacity: 0.6;
   border-radius: 6px;
+  height: 400px;
+  margin-top:100px;
+  margin-right: 150px;
 }
 .select {
   width: 95%;
@@ -84,7 +102,7 @@ h2 {
 
 input { 
   width: 95%;
-  background: #fff;
+  background: #b6b1b1;
   text-align: center;
   margin-bottom: 25px;
   padding: 10px;
@@ -97,15 +115,15 @@ input {
   padding: 8px;
   font-weight: 600;
   font-size: 18px;
-  color: #ffffff;
-  background-color: #1883ba;
+  color: #000000;
+  background-color: #b6b1b1;
   border-radius: 6px;
   display: block;
   margin: 0 auto 20px;
   }
   .for-but:hover{
-    color: #1883ba;
-    background-color: #ffffff;
+    color: #b6b1b1;
+    background-color: #363434;
   }
   label {
     display: flex;
@@ -130,12 +148,14 @@ input {
 
 
 //--------------------ANIMO----------------------
+
 .container {
   display: flex;
   width: 100%;
   padding: 4% 2%;
   box-sizing: border-box;
-  height: 100vh;
+  height: fit-content;
+  height: 90vh;
 }
 
 .box {
@@ -156,7 +176,7 @@ input {
   }
 
   > span {
-    font-size: 3.8vh;
+    font-size: 20px;
     display: block;
     text-align: center;
     height: 10vh;

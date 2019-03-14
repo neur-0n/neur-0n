@@ -1,8 +1,7 @@
-
+<section class="signup">
 
 <form class="form-login"action="/auth/signup" method="POST" id="form-container"enctype="multipart/form-data">
-    <label>Poster</label>
-    <input type="file" name="photo">
+    
     
   <label for="username">Username</label>
   <input id="username" type="text" name="username" placeholder="JonSnow">
@@ -12,6 +11,11 @@
   <label for="password">Password</label>
   <input id="password" type="password" name="password" placeholder="Your password">
   <br>
+  <label>Select image</label>
+  <input type="file" name="photo">
+
+
+
   {{#if message }}
     <div class="error-message">{{ message }}</div>
   {{/if}}
@@ -25,3 +29,4 @@
     <a href="/auth/login">Login</a>
   </p>
 </form>
+</section>

@@ -7,17 +7,15 @@ body {
 .home {
   background-image: url("/images/home1.jpg");
   background-size: cover;
-  background-position-x: 50%;
-  background-position-y: 50%;
   background-repeat: no-repeat;
   height: 100vh; }
 
 nav {
   width: 100vw;
   display: flex;
-  background-color: rgba(182, 179, 179, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   justify-content: flex-end;
-  padding: 5px;
+  padding: 20px;
   box-sizing: border-box;
   font-size: 20px; }
 
@@ -33,45 +31,29 @@ nav a {
   justify-content: space-between; }
 
 .movie-img {
-  max-width: 20%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; }
+  max-width: 20%; }
 
 nav a {
   margin-right: 15px;
   text-decoration: none;
   color: black; }
 
-.signup {
-  background-image: url("/images/home4.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  display: flex;
-  flex-direction: row-reverse; }
-
 .login {
-  background-image: url("/images/home3.jpg");
+  background-image: url("/images/home2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
-  display: flex;
-  flex-direction: row-reverse; }
+  height: 100vh; }
 
 h2 {
   display: flex;
   justify-content: center; }
 
 .form-login {
-  background: #fff;
+  background: white;
   width: 250px;
   padding: 50px 50px 50px 50px;
-  opacity: 0.6;
-  border-radius: 6px;
-  height: 400px;
-  margin-top: 100px;
-  margin-right: 150px; }
+  opacity: 0.7;
+  border-radius: 6px; }
 
 .select {
   width: 95%;
@@ -132,8 +114,7 @@ label {
   width: 100%;
   padding: 4% 2%;
   box-sizing: border-box;
-  height: fit-content;
-  height: 90vh; }
+  height: 100vh; }
 
 .box {
   flex: 1;
@@ -150,7 +131,7 @@ label {
     object-fit: cover;
     transition: .5s; }
   .box > span {
-    font-size: 20px;
+    font-size: 3.8vh;
     display: block;
     text-align: center;
     height: 10vh;
