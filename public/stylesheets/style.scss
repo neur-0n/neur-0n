@@ -16,6 +16,11 @@ body {
     
   }
 }
+input,button,select{
+  &:focus{
+    outline: none;
+  }
+}
 
 .ball {
 
@@ -67,6 +72,7 @@ body {
 }
 
 .pre {
+  height: fit-content;
 	padding: 5px;
 	font-family: "Montserrat", serif;
 	text-transform: uppercase;
@@ -205,11 +211,13 @@ nav {
   display: flex;
   background-color:rgba(255,255,255,1);
   justify-content: flex-end;
-  padding: 20px;
+  padding: 10avapx;
   box-sizing: border-box;
   font-size: 20px;
   position: absolute;
   z-index: 9;
+  flex-direction: row;
+  align-items: center;
   
 
   &.homeClasses {
@@ -244,8 +252,8 @@ nav a {
   max-width: 1000px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding-top: 8rem;
+  justify-content: space-evenly;
+  padding-top: 30px;
   margin: 0 auto;
 
 }
@@ -253,16 +261,31 @@ nav a {
   text-align: center;
   font-size: 20px;
   padding-bottom: 10px;
+  font-weight: bold;
+  
+  
+}
+.boxcontent{
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   
 }
 .movie{
-  width: 20%;
   flex: 0 0 33%;
-  //padding: 1rem;
   box-sizing: border-box;
-  //margin-right: 10px;
-  padding: 40px;
-
+  padding: 30px 0px;
+  border-radius: 20px;
+  box-shadow: 0 20px 30px rgba(0,0,0,.1);
+  margin: 15px 5px;
+  width: 100%;
+  max-width: calc(100% / 3.3);
+  position: relative;
+  padding-bottom: 70px;
+  &.list{
+    padding-bottom: 75px;
+  }
 }
 .movie-img{
   max-height: 30rem;
@@ -287,7 +310,7 @@ nav a {
  }
 //-----------FORM,login,signup,select-------------
 .signup{
-  background-image: url("/images/home4.jpg");
+  background-image: url("/images/home3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -298,7 +321,7 @@ nav a {
 
 
 .login{
-  background-image: url("/images/home3.jpg");
+  background-image: url("/images/home4.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -316,8 +339,9 @@ h2 {
   opacity: 0.6;
   border-radius: 6px;
   height: 400px;
-  margin-top:100px;
   margin-right: 150px;
+  margin-top: 120px;
+  margin-left: 180px;
 }
 .select {
   width: 95%;
@@ -325,10 +349,19 @@ h2 {
   text-align: center;
   margin-bottom: 25px;
   padding: 10px;
-  font-size: 9px;
+  font-size: 12px;
   position: relative;
   letter-spacing: 0.06em;
   border-radius: 6px;
+ 
+}
+select[name="genero"]{
+  background: white;
+  height: 37px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 15px;
 }
 
 input { 
@@ -337,7 +370,7 @@ input {
   text-align: center;
   margin-bottom: 25px;
   padding: 10px;
-  font-size: 9px;
+  font-size: 12px;
   position: relative;
   letter-spacing: 0.06em;
   border-radius: 6px;
@@ -351,6 +384,20 @@ input {
   border-radius: 6px;
   display: block;
   margin: 0 auto 20px;
+  
+  &.pelis{
+    position: absolute;
+    bottom: 15px;
+  }
+  &.delete{
+    right: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    max-width: 110px;
+    position: absolute;
+    bottom: 3px;
+  }
   }
   .for-but:hover{
     color: #b6b1b1;
@@ -372,7 +419,23 @@ input {
 .avatar{
   display: flex;
   align-items: center;
-  font-size: 10px;}
+  font-size: 10px;
+p{
+  margin-right: 15px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+a{
+  img{
+    max-width: 50px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px 0;
+  }
+}
+}
 .overview {
   max-width: 200px;
 }
@@ -386,6 +449,7 @@ input {
   // padding: 4% 2%;
   box-sizing: border-box;
   height: fit-content;
+  height:65%;
 }
 
 .box {
@@ -411,6 +475,7 @@ input {
     text-align: center;
     height: 10vh;
     line-height: 2.6;
+    
   }
 
   &:hover { 
@@ -419,6 +484,10 @@ input {
     > img {
       width: 100%;
       height: 100%;
+    }
+    > span {
+     padding: 15px;
+      
     }
   }
 }
@@ -451,6 +520,7 @@ input {
   border-radius: 6px;
   display: block;
   margin: 0 auto 20px;
+  border-radius: 6px;
   }
   .enviar:hover{
     color: #b6b1b1;
@@ -513,6 +583,11 @@ input {
     padding: 20px;
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
   }
   
  
@@ -522,7 +597,7 @@ input {
     box-sizing: border-box;
     border: 1px solid #444;
     border-left-color: #000;
-    border-radius: 0 5px 5px 0;
+    border-radius:6px;
     box-shadow: 0 2px 0 #000;
     color: #fff;
     display: block;
@@ -536,7 +611,8 @@ input {
     padding: 0;
     position: relative;
     text-shadow: 0 -1px 0 #000;
-    width: 80px;
+    width: 120px;
+    letter-spacing: 1px;
   }	
   
   
@@ -551,5 +627,127 @@ input {
   text-align: center;
   width: 100%;
 }
+.miperfil-container{
+  padding-top: 45px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background:url("/images/home3.jpg");
+  color: white;
+  position: relative;
+  background-position: center 71%;
+  height: 110px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &.peliculas{
+    background:url("/images/home1.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  &.animo{
+    background:url("/images/home2.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin-bottom: 40px;
+      background-size: cover;
+      background-position: center center;
+  }
   
+  
+  img{
+    max-width: 66px;
+    margin: 20px;
+    width: 100%;
+  }
+  .info{
+    padding-right: 50px;
+    p{
+      font-size: 20px;
+    }
+    .btnEdit{
+      width: 100%;
+      background: white;
+      text-align: center;
+      max-width: 145px;
+      padding: 5px;
+      margin: 5px 0;
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      text-align: center;
+      max-width: 130px;
+      padding: 10px 25px;
+      margin: 5px 0;
+      position: relative;
+      z-index: 10;
+      margin: 0 auto;
+      margin-top: 10px;
+      padding: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      color: #000000;
+      background-color: #b6b1b1;
+      border-radius: 6px;
+     &:hover{
+        color: #b6b1b1;
+        background-color: White;
+      }
+    
+    a{
+      text-decoration: none;
+      color:black;
+
+    }
+    }
+  }
+  
+  h4{
+    position: absolute;
+    bottom: -23px;
+    right: 0;
+    font-size: 76px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+.btnAnadir{
+  width: 100%;
+  text-align: center;
+  max-width: 145px;
+  padding: 10px 25px;
+  margin: 5px 0;
+  position: relative;
+  z-index: 10;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 8px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000000;
+  background-color: #b6b1b1;
+  border-radius: 6px;
+  text-decoration: none;
+   &:hover{
+      color: #b6b1b1;
+      background-color: #363434;
+    }
+
+  a{
+    color: white;
+    text-decoration: none;
+  }
+}
+.contentMovies{
+  max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 30px;
+    margin: 0 auto;
+}
  

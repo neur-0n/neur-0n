@@ -1,21 +1,51 @@
+{{!-- intro --}}
+<div class="miperfil-container peliculas" style="width:100%">
+  <img src="{{user.img}}" alt="" srcset="">
+  <div class="info">
+    <p>{{user.username}}</p>
+  </div>
+  <h4>PELICULAS</h4>
+  {{!-- <a href="/user/milista">Actualizar</a>  --}}
+</div>
 <section class="movies-container">
 
-<script src="/javascripts/movie.js"></script>
-{{#each peli}}
+  <script src="/javascripts/movie.js"></script>
 
-  <article class="movie">
+  <a href="/user/milista/{{_id}}" class="btnAnadir">Ir a mi lista</a>
 
-      
+  <div class="contentMovies">
+    {{#each peli}}
+
+    <article class="movie">
+
       <p class="p-peli">{{title}}<br>{{dates}}</p>
-      
-      <img src="https://image.tmdb.org/t/p/w1280/{{img}}" class="movie-img">
-      <p class="overviews">{{overview}}</p>
-      <a href="/user/milista/{{_id}}">mi lista</a>
-      
-      <button class="for-but" onclick="pepe({title:`{{title}}`, overview:`{{overview}}`, img:`{{img}}`, dates:`{{dates}}`})">añade</button>
 
-  </article>
+      <img src="https://image.tmdb.org/t/p/w1280/{{img}}" class="movie-img">
+      <div class="boxcontent">
+        <p class="overviews">{{overview}}</p>
+
+
+        <button class="for-but pelis addPeli"
+          onclick="pepe({title:`{{title}}`, overview:`{{overview}}`, img:`{{img}}`, dates:`{{dates}}`})">Añadir</button>
+
+      </div>
+    </article>
     {{/each}}
 
+  </div>
+
 </section>
+
+<script>
+  
+
+  document.querySelectorAll('.addPeli').forEach(button => {
+    button.onmousedown = e => {
+      console.log('clicked')
+      e.target.style.background = 'green';
+      e.target.innerHTML = 'Añadida';
+    }
+  })
+
+</script>
 {{!-- <a href="/movie/formverde{{_id}}">añadir ami lista</a> --}}

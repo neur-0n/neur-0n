@@ -23,6 +23,7 @@ Router.get("/animo", (req, res) => {
      "verde6.jpg",
      "verde7.jpg",
      "verde8.jpg",
+     "German.png"
   ]
   const greenimg = greenimgs[Math.floor(Math.random()*greenimgs.length)]
 
@@ -46,6 +47,7 @@ Router.get("/animo", (req, res) => {
     "rojo4.jpg",
     "rojo5.jpg",
     "rojo6.jpg",
+    "Gabi.png"
   ]
   const redimg = redimgs[Math.floor(Math.random()*redimgs.length)]
   
@@ -55,12 +57,25 @@ Router.get("/animo", (req, res) => {
       "Un día más en la oficina",
       "Sin novedad en el frente",
       "Esto se puede hacer por programación",
-      "La insoportable levedad del sel"
+      "Balta trae carbón",
+      "¡ya huele!"
     ]
   const yellowSentence = yellowSentences[Math.floor(Math.random()*yellowSentences.length)]
 
+  const yellowimgs = [
+    "amarillo1.jpg",
+    "amarillo2.jpg",
+    "amarillo3.jpg",
+    "amarillo4.jpg",
+    "amarillo5.jpg",
+    "amarillo6.jpg",
+    "Gabi.png",
+    "Alberto.png"
+  ]
+  const yellowimg = yellowimgs[Math.floor(Math.random()*yellowimgs.length)]
 
-  res.render("user/animo", {greenSentence, redSentence, yellowSentence, greenimg, redimg})
+
+  res.render("user/animo", {greenSentence, redSentence, yellowSentence, greenimg, redimg, yellowimg})
 })
 
 Router.get("/verde", (req, res) => {
